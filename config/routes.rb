@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   post "encode" => "url#encode"
   post "decode" => "url#decode"
   get "/:slug" => "url#redirect"
+
+  root to: "url#index"
 end

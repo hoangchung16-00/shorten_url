@@ -13,4 +13,11 @@ class UrlController < ApplicationController
     url = ShortUrl.find_by!(slug: params[:slug]).url
     redirect_to url, allow_other_host: true
   end
+
+  def index
+    render json: {
+      encode: "POST /encode?url={URL}",
+      decode: "POST /decode?short_url={SHORT_URL}"
+    }
+  end
 end
