@@ -8,4 +8,9 @@ class UrlController < ApplicationController
     url = UrlService.expand(params[:short_url])
     render json: { url: }
   end
+
+  def redirect
+    url = ShortUrl.find_by!(slug: params[:slug]).url
+    redirect_to url, allow_other_host: true
+  end
 end
