@@ -1,24 +1,26 @@
-# README
+# VERSION
+- Ruby (3.3.6)
+- Rails (8.0.2)
+- SQLite3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# BUILT
+1. With local environment
+ - Install ruby, rails, sql with specific version
+ - Clone repository
+ - Run
+    + `bundle install`
+    + `bin/rails db:create`
+    + `bin/rails db:migrate`
+    + `rails s` to start server
 
-Things you may want to cover:
+2. With docker
+ - Install docker (Docker version 28.0.1)
+ - Clone repository
+ - Run `docker compose up`
 
-* Ruby version
+# POTENTIAL ATTACK VECTOR
+ - Distributed Denial of Service (DDoS): This prevents users from accessing services and can force site to crash.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# SCALE UP
+ - Database Optimization
+ - Load Balancing
