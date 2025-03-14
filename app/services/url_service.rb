@@ -5,7 +5,7 @@ class UrlService
   end
 
   def self.expand(short_url)
-    url = ShortUrl.find_by!(slug: URI.parse(short_url).path[1..-1])&.url
+    ShortUrl.find_by!(slug: URI.parse(short_url).path[1..-1])&.url
   end
 
   def self.build_url(url, host)
