@@ -18,6 +18,9 @@
  - Clone repository
  - Run `docker compose up`
 
+# API endpoint
+ - POST `/encode?url={url}`
+ - POST `/decode?short_url={short_url}`
 # POTENTIAL ATTACK VECTOR
  - Distributed Denial of Service (DDoS): This prevents users from accessing services and can force site to crash.
 
